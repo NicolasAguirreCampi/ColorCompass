@@ -1,3 +1,5 @@
+# This dictionary is a collection of color names and all its tonality variants to ensure we are naming the correct color.
+
 dictionary = {
     "aliceblue": [[240, 248, 255]],
     "antiquewhite": [
