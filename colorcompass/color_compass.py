@@ -1,4 +1,4 @@
-from color_dictionary import dictionary
+from .color_dictionary import dictionary
 
 import math
 

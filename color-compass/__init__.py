@@ -1,1 +1,0 @@
-from color_compass import get_color_name
