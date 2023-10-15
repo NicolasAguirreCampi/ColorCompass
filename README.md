@@ -1,10 +1,14 @@
-**ColorCompass: Navigating through the world of colors efficiently**
+<h1 align="center">ColorCompass</h1>
+
+<p align="center">
+  <img src="logo.png" alt="Color Compass Logo" width="200" height="200"/>
+</p>
 
 ---
 
 ### Overview
 
-ColorCompass is a Python library designed to assist developers, designers, and enthusiasts in mapping given RGB values to human-readable color names effortlessly. With a comprehensive internal database of over 500 color shades mapped to their RGB equivalents, the library implements a precise and efficient algorithm - the Euclidean Distance Calculation, ensuring that an RGB input garners a descriptive color name output, even when the exact match isn't available in the database.
+ColorCompass is a Python library designed to efficiently find the closest named color to a given RGB value by using an efficient Euclidean distance calculation across a range of predefined colors.
 
 ### How it Works
 
@@ -26,33 +30,60 @@ Here,
    
 3. **Return Closest Color**: The algorithm identifies the color name associated with the RGB value in the database that has the smallest Euclidean Distance to the input color. This color name is returned to the user as the closest match.
 
-### Usage Example
+## 🚀 Installation
 
-Given the Pythonic nature of ColorCompass, employing the library in your projects is as easy as:
+You can install ColorCompass using pip:
 
-```python
-import colorcompass
-
-# User input: An RGB color value
-input_color = (130, 100, 240)
-
-# Finding and printing the closest color name
-closest_color_name = colorcompass.find_closest_color_name(input_color)
-print(f"The closest color name for RGB{input_color} is {closest_color_name}.")
+```sh
+pip install color-compass
 ```
 
-### Why ColorCompass?
+## 🎨 Basic Usage
 
-- **Precision**: Through the Euclidean Distance Calculation, the library promises high precision in color mapping.
-  
-- **Extensive Color Database**: With an internal database housing over 500 color shades, ColorCompass offers an extensive palette ensuring a close match for most RGB inputs.
+To find the closest color name for a given RGB value, simply use the `find_closest_color` function as follows:
 
-- **Efficiency**: Designed with a focus on minimal computational overhead, ColorCompass ensures that color mappings are calculated and retrieved efficiently, even in applications where processing time is paramount.
+```python
+from colorcompass import find_closest_color
 
-### Contribution & Support
+# Define your target color as an RGB list
+target_color = [152, 251, 152]
 
-We welcome contributions and support from the developer community. Feel free to fork, modify and make pull requests. For issues, please use the [issues tab](#) to report and track them.
+# Use the function to find the closest color name
+closest_color_name = find_closest_color(target_color)
 
----
+# Print the found color name
+print(closest_color_name)
+```
 
-This framework should give you a starting point for your README, offering a blend of technical and layman explanations for varied audience understanding. Feel free to modify, add, or remove sections to better suit your project's nature and scale.
+### Full Example
+
+```python
+from colorcompass import find_closest_color
+
+def main():
+    # Define some target colors
+    target_colors = [
+        [152, 251, 152],
+        [70, 130, 180],
+        [255, 0, 0]
+    ]
+    
+    # Find and print the closest color name for each target color
+    for color in target_colors:
+        print(f"Closest color to RGB{tuple(color)} is {find_closest_color(color)}")
+
+if __name__ == "__main__":
+    main()
+```
+
+## 📄 License
+
+ColorCompass is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for more details.
+
+## 🙌 Contributing
+
+Contributions are welcome! Please read the [CONTRIBUTING](CONTRIBUTING.md) file for details on our code of conduct and the process for submitting pull requests.
+
+## 📞 Contact
+
+If you have questions or issues, please [open an issue](https://github.com/NicolasAguirreCampi/ColorCompass/issues/new).
