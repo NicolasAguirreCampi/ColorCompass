@@ -22,4 +22,4 @@ def get_color_name(target_rgb):
     return closest_color_name
 
 
-print(get_color_name([152, 251, 152]))
+# print(get_color_name([152, 251, 152]))
