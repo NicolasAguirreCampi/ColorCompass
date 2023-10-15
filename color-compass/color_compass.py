@@ -2,7 +2,7 @@ from color_dictionary import dictionary
 
 import math
 
-def find_closest_color(target_rgb):
+def get_color_name(target_rgb):
     min_distance = float('inf')  # Begins with infinite to ensure that any distance will be lower
     closest_color_name = None
     
@@ -22,4 +22,4 @@ def find_closest_color(target_rgb):
     return closest_color_name
 
 
-print(find_closest_color([152, 251, 152]))
+print(get_color_name([152, 251, 152]))

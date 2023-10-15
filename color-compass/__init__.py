@@ -1,1 +1,1 @@
-from .color_compass import find_closest_color
+from .color_compass import get_color_name
