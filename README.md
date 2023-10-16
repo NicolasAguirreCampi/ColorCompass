@@ -1,7 +1,7 @@
 <h1 align="center">ColorCompass</h1>
 
 <p align="center">
-  <img src="logo.png" alt="Color Compass Logo" width="200" height="200"/>
+  <img src="https://github.com/NicolasAguirreCampi/ColorCompass/blob/main/logo.png?raw=true" alt="Color Compass Logo" width="200" height="200"/>
 </p>
 
 ---
