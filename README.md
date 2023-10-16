@@ -58,27 +58,6 @@ print(f"Color to RGB{tuple(target_color_rgb)}: {color_name_rgb}")
 print(f"Color to {target_color_hex}: {color_name_hex}")
 ```
 
-### Full Example
-
-```python
-from colorcompass import get_color_name
-
-def main():
-    # Define some target colors
-    target_colors = [
-        [152, 251, 152],
-        [70, 130, 180],
-        [255, 0, 0]
-    ]
-    
-    # Find and print the  color name for each target color
-    for color in target_colors:
-        print(f"Color to RGB{tuple(color)} is {get_color_name(color)}")
-
-if __name__ == "__main__":
-    main()
-```
-
 ## 📄 License
 
 ColorCompass is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for more details.
