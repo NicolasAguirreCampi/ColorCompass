@@ -69,3 +69,7 @@ Contributions are welcome! Please read the [CONTRIBUTING](CONTRIBUTING.md) file 
 ## 📞 Contact
 
 If you have questions or issues, please [open an issue](https://github.com/NicolasAguirreCampi/ColorCompass/issues/new).
+
+## 🙏 Acknowledgements
+
+Special thanks to [cloford](https://cloford.com/resources/colours/500col.htm) for providing an extensive collection of color names and their respective codes, which was pivotal in developing this project. Although modifications were made to the original list, it served as a foundational resource in building the ColorCompass library.
