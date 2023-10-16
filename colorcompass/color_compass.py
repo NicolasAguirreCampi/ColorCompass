@@ -23,7 +23,7 @@ def get_color_name(color):
     color_name = None
     
     # Iterates through colors and its variants
-    for color_name, variants in dictionary.items():
+    for name, variants in dictionary.items():
         for variant in variants:
             distance = math.sqrt(
                 (color[0] - variant[0])**2 +
@@ -33,7 +33,7 @@ def get_color_name(color):
             # If this variant is closer to the current closest, update
             if distance < min_distance:
                 min_distance = distance
-                color_name = color_name
+                color_name = name
     
     return color_name
 
@@ -74,13 +74,11 @@ def detect_color_format(color):
     if isinstance(color, str):
         hex_pattern = re.compile(r'^#([0-9a-fA-F]{3}){1,2}$')
         if hex_pattern.match(color):
-            print(f"{color} is a hexadecimal")
             return "hexadecimal"
     
     # RGB case
     elif isinstance(color, (tuple, list)) and len(color) == 3:
         if all(isinstance(value, int) and 0 <= value <= 255 for value in color):
-            print(f"{color} is rgb")
             return "rgb"
     
     # Rise an error if is none of the above
