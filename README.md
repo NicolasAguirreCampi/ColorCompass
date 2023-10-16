@@ -40,19 +40,22 @@ pip install colorcompass
 
 ## 🎨 Basic Usage
 
-To find the  color name for a given RGB value, simply use the `get_color_name` function as follows:
+To find the color name for a given RGB value, simply use the `get_color_name` function as follows:
 
 ```python
 from colorcompass import get_color_name
 
-# Define your target color as an RGB list
-target_color = [152, 251, 152]
+# Define your target color as an RGB list or a hexadecimal string
+target_color_rgb = [152, 251, 152]
+target_color_hex = "#98FB98"
 
-# Use the function to find the  color name
-color_name = get_color_name(target_color)
+# Use the function to find the color name
+color_name_rgb = get_color_name(target_color_rgb)
+color_name_hex = get_color_name(target_color_hex)
 
 # Print the found color name
-print(color_name)
+print(f"Color to RGB{tuple(target_color_rgb)}: {color_name_rgb}")
+print(f"Color to {target_color_hex}: {color_name_hex}")
 ```
 
 ### Full Example
