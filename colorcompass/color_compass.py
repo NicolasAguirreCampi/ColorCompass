@@ -22,18 +22,17 @@ def get_color_name(color):
     min_distance = float('inf')  # Begins with infinite to ensure that any calculated distance will be lower.
     color_name = None
     
-    # Iterates through colors and its variants
-    for name, variants in dictionary.items():
-        for variant in variants:
-            distance = math.sqrt(
-                (color[0] - variant[0])**2 +
-                (color[1] - variant[1])**2 +
-                (color[2] - variant[2])**2
-            )
-            # If this variant is closer to the current closest, update
-            if distance < min_distance:
-                min_distance = distance
-                color_name = name
+    # Iterates through colors
+    for name, rgb in dictionary.items():
+        distance = math.sqrt(
+            (color[0] - rgb[0])**2 +
+            (color[1] - rgb[1])**2 +
+            (color[2] - rgb[2])**2
+        )
+        # If this color is closer to the current closest, update
+        if distance < min_distance:
+            min_distance = distance
+            color_name = name
     
     return color_name
 
@@ -57,7 +56,6 @@ def translate_hex_to_rgb(hexadecimal):
         hexadecimal = ''.join([char*2 for char in hexadecimal])
     
     # Translation to RGB
-    print(f"hexadecimal: {hexadecimal} ~ rgb: {tuple(int(hexadecimal[i:i+2], 16) for i in (0, 2, 4))}")
     return tuple(int(hexadecimal[i:i+2], 16) for i in (0, 2, 4))
 
 def detect_color_format(color):
