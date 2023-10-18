@@ -72,4 +72,4 @@ If you have questions or issues, please [open an issue](https://github.com/Nicol
 
 ## 🙏 Acknowledgements
 
-Special thanks to [cloford](https://cloford.com/resources/colours/500col.htm) for providing an extensive collection of color names and their respective codes, which was pivotal in developing this project. Although modifications were made to the original list, it served as a foundational resource in building the ColorCompass library.
+Special thanks to [xkcd by Randall Munroe](https://blog.xkcd.com/2010/05/03/color-survey-results/) for providing an extensive collection of nearly 1000 color names and their respective codes, which was pivotal in developing this project. Although modifications were made to the original list, it served as a foundational resource in building the ColorCompass library.
